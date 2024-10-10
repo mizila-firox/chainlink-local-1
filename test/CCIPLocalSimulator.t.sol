@@ -6,14 +6,14 @@ import {Test, console2} from "forge-std/Test.sol";
 import {IRouterClient, WETH9, LinkToken, BurnMintERC677Helper} from "@chainlink/local/src/ccip/CCIPLocalSimulator.sol";
 import {CCIPLocalSimulator} from "@chainlink/local/src/ccip/CCIPLocalSimulator.sol";
 
-// mine
+// firox
 import {CCIPSender_Unsafe} from "lib/chainlink-local/src/test/ccip/CCIPSender_Unsafe.sol";
 import {CCIPReceiver_Unsafe} from "lib/chainlink-local/src/test/ccip/CCIPReceiver_Unsafe.sol";
 
 contract Demo is Test {
     CCIPLocalSimulator public ccipLocalSimulator;
 
-    // mine
+    // firox
     CCIPSender_Unsafe public sender;
     CCIPReceiver_Unsafe public receiver;
 
@@ -38,7 +38,7 @@ contract Demo is Test {
 
         ccipLocalSimulator.requestLinkFromFaucet(address(sender), 2 ether);
 
-        // mine
+        // firox
         ccipBnM.drip(address(sender));
 
         sender.send(
